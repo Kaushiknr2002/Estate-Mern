@@ -11,7 +11,7 @@ export const signup= async (req,res,next) =>{
     await newUser.save()
     res.status(201).json("create success")   //because of add duplicate value by use try and catch
     }
-    catch(err){
-       next(err)
+    catch(error){
+       next(error)
     }
 }
